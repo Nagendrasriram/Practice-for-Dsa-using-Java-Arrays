@@ -1,0 +1,53 @@
+
+
+class Main {
+    public static void main(String[] args) {
+        int[] nums = {2 ,1 ,5 ,4 ,3 , 0,0};
+        int ind=-1,gre=-1;
+        for(int i=nums.length-2;i>=0;i--)
+        {
+            if(nums[i]<nums[i+1])
+            {
+                ind=i;
+                break;
+            }
+        }
+        if(ind==-1)
+        {
+        int l=0,r=nums.length-1;
+        while(l<r)
+        {
+            int t = nums[l];
+            nums[l]=nums[r];
+            nums[r]=t;
+            l++;
+            r--;
+        }
+        }
+        else{
+        for(int i=nums.length-1;i>ind;i--)
+        {
+            if(nums[ind]<nums[i])
+            {
+                int temp=nums[ind];
+                nums[ind]=nums[i];
+                nums[i]=temp;
+                break;
+            }
+        }
+        int left=ind+1,right=nums.length-1;
+        while(left<right)
+        {
+            int temp = nums[left];
+            nums[left]=nums[right];
+            nums[right]=temp;
+            left++;
+            right--;
+        }
+        }
+        for(int i=0;i<nums.length;i++)
+        {
+            System.out.print(nums[i]+" ");
+        }
+    }
+}
