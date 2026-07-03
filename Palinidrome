@@ -1,0 +1,18 @@
+class Main {
+    public static void main(String[] args) {
+        String str = "mada";
+        char[] ch = str.toCharArray();
+        int left=0,right=ch.length-1;
+        while(left<right)
+        {
+            if(ch[left]!=ch[right])
+            {
+                System.out.print("Flase");
+                break;
+            }
+            left++;
+            right--;
+        }
+    }
+    
+}
