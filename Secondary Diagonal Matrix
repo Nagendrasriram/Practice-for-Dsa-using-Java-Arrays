@@ -1,0 +1,21 @@
+class Main {
+    public static void main(String[] args) {
+        int n = 4;
+        int m = 4;
+        
+        int[][] arr = {
+            {4, 2, 3, 1},
+            {5, 7, 8, 9},
+            {6, 4, 9, 2},
+            {3, 1, 5, 8}
+        };
+        
+        int sum=0,cnt=m-1;
+        for(int i=0;i<n;i++)
+        {
+            System.out.print(arr[i][n-1-i]+" ");
+        }
+        System.out.print(sum+ " ");
+        
+}
+}
