@@ -1,0 +1,26 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        int arr[] = {4,7,9,10};
+        int d=5;
+        
+        System.out.print(capacity(arr,d));
+    }
+    public static int capacity(int[] arr,int d)
+    {
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]<=d)
+            {
+                d++;
+                
+            }
+            else
+            {
+                break;
+            }
+            
+        }
+        return d;
+    }
+}
